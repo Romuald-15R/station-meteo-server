@@ -45,4 +45,6 @@ app.post("/data", (req, res) => {
     res.send("OK");
 });
 
-server.listen(3000, () => console.log("Server HTTP + WebSocket écoutant sur port 3000"));
+// Render dia mametraka port ao amin'ny environment variable PORT
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => console.log(`Server HTTP + WebSocket écoutant sur port ${PORT}`));
